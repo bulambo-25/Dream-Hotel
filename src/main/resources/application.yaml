@@ -1,0 +1,14 @@
+server:
+  error:
+    include-stacktrace: always
+  port: 8081
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:8889/deam?createDatabaseIfNotExist=true
+    username: root
+    password: root
+

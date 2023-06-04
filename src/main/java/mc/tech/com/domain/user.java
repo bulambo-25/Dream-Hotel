@@ -39,6 +39,15 @@ public class user {
         this.address = address;
     }
 
+    public user(int id, @NonNull String name, @NonNull String email, @NonNull String phoneNumber, @NonNull String password, @NonNull String address) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.address = address;
+    }
+
     @NonNull
     private String address;
 

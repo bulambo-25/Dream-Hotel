@@ -40,6 +40,11 @@ public class serviceUser implements userImpl {
         log.info("find this controllerUser ......"+readingUserById);
         return readingUserById;
     }
+    public user updateUser(user user1) {
+        user user2=this.userRepository.save(user1);
+        log.info("saving this User ......"+user2);
+        return user1;
+    }
 
     @Override
     public void delete(int deleteById) {

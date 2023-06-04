@@ -27,7 +27,13 @@ public class controllerUser {
             user save=this.serviceUser.save(user1);
             return  ResponseEntity.ok(save);
         }
-        @GetMapping("read/{id}")
+       @PutMapping("/update")
+        public ResponseEntity<user> updateEmployee(@RequestBody user user1) {
+           user updateEmployee = this.serviceUser.updateUser(user1);
+        return new ResponseEntity<>(updateEmployee, HttpStatus.OK);
+        }
+
+    @GetMapping("read/{id}")
         public ResponseEntity<user> read(@PathVariable  int id) {
             user read= serviceUser.read(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             return ResponseEntity.ok(read);

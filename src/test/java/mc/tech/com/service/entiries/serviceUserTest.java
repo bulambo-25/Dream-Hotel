@@ -16,9 +16,11 @@ class serviceUserTest {
 
     @Autowired
     private serviceUser service;
-    user user1=new user("dray","draybulambo45@gmail.com","0814783125","2345654","ROSE ROAD");
+    user user1=new user("dray","dray@gmail.com","0814783125","2345654","ROSE ROAD");
+    user user2=new user("Franck","franck@gmail.com","0876543123","56789","ROSE ROAD");
     @Test
     void save() {
         this.service.save(user1);
+        this.service.save(user2);
     }
 }
